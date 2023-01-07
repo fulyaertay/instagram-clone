@@ -76,14 +76,17 @@ function App() {
             <div className="h-px bg-gray-300 flex-1">
             </div>
           </div>
-        </form>
-
-        <div>
-          <a href="#" className="flex justify-center items-center gap-x-2 text-sm font-semibold">
+        
+          <a href="#" className="flex justify-center items-center gap-x-2 text-sm font-semibold text-facebook">
           <AiFillFacebook size={20}>
           </AiFillFacebook>
           Log in with Facebook</a>
-        </div>
+          <a href="#" className="text-xs flex items-center justify-center text-link">
+            Forgot password?
+          </a>
+        </form>
+
+      
       </div>
     </div>
   );
