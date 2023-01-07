@@ -20,7 +20,7 @@ function App() {
       } else {
         current += 1;
       }
-    }, 1000);
+    }, 2000);
   }, [ref]);
   return (
     <div className="h-full w-full flex items-center justify-center ">
