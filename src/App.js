@@ -53,6 +53,11 @@ function App() {
           ></img>
         </div>
       </div>
+
+      <div className="h-[350px] bg-white border">
+        <img className="h-[51px]" src="https://www.secure.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png"></img>
+        <form></form>
+      </div>
     </div>
   );
 }
