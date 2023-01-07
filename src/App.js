@@ -1,5 +1,6 @@
 import "./App.css";
 import { useEffect, useRef, useState } from "react";
+import Input from "./components/input";
 function App() {
   const ref = useRef();
   const [username,setUsername]=useState('')
@@ -64,30 +65,9 @@ function App() {
           ></img>
         </a>
         <form className="grid gap-y-1.5">
-          <label className="block relative">
-            <input
-              required={true}
-              type="text"
-              className="bg-zinc-50 border px-2 outline-none text-xs focus:border-gray-400 rounded-sm w-full valid:pt-[10px] h-[38px] peer"
-              value={username}
-              onChange={e=> setUsername(e.target.value)}
-            ></input>
-            <small className="cursor-text pointer-events-none absolute top-1/2 left-[9px] text-xs peer-valid:text-[10px] peer-valid:top-2.5 text-gray-500 transition-all -translate-y-1/2">
-              Phone number,username,email
-            </small>
-          </label>
-          <label  className="block relative">
-            <input
-              required={true}
-              type="password"
-              value={password}
-              onChange={e=> setPassword(e.target.value)}
-              className="bg-zinc-50 border px-2 outline-none text-xs focus:border-gray-400 rounded-sm w-full valid:pt-[10px] h-[38px] peer"
-            ></input>
-            <small className="cursor-text pointer-events-none absolute top-1/2 left-[9px] text-xs peer-valid:text-[10px] peer-valid:top-2.5 text-gray-500 transition-all -translate-y-1/2">
-              Password
-            </small>
-          </label>
+          <Input type="text" value={username}   onChange={e=> setUsername(e.target.value)} label="Phone number,username,email"></Input>
+          <Input type="password" value={password}   onChange={e=> setPassword(e.target.value)} label="Password"></Input>
+    
           <button type="submit" disabled={!enable} className="h-[30px] rounded bg-brand font-medium text-white text disabled:opacity-50">Log In</button>
           <div className="flex items-center">
             <div className="h-px bg-gray-300 flex-1"></div>

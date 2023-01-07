@@ -1,4 +1,4 @@
-export default function input({label, ...props}){
+export default function Input({label, ...props}){
     return(
         <label className="block relative">
         <input
