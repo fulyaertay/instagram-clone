@@ -88,7 +88,7 @@ function App() {
               Password
             </small>
           </label>
-          <button type="submit"disabled={'!enable'} className="h-[30px] rounded bg-brand font-medium text-white text disabled:opacity-50">Log In</button>
+          <button type="submit" disabled={!enable} className="h-[30px] rounded bg-brand font-medium text-white text disabled:opacity-50">Log In</button>
           <div className="flex items-center">
             <div className="h-px bg-gray-300 flex-1"></div>
             <span className="px-4 text-[13px] text-gray-500 font-semibold">OR</span>
