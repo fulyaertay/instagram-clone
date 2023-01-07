@@ -60,8 +60,8 @@ function App() {
         </a>
         <form>
           <label for="" className="block relative">
-            <input type="" name="" value="" className="bg-zinc-50 border outline-none focus:border-gray-300 rounded-sm w-full h-[38px]"></input>
-            <small className="cursor-text pointer-events-none absolute top-1/2 left-2 text-xs text-gray-500 -translate-y-1/2">Phone number,username,email</small>
+            <input  required={true} type="" name="" value="" className="bg-zinc-50 border px-2 outline-none focus:border-gray-400 rounded-sm w-full h-[38px] peer"></input>
+            <small className="cursor-text pointer-events-none absolute top-1/2 left-[9px] text-xs peer-valid:text-[10px] text-gray-500 transition-all -translate-y-1/2">Phone number,username,email</small>
           </label>
         </form>
       </div>
