@@ -6,21 +6,27 @@ function App() {
     let images = ref.current.querySelectorAll("img"),
       total = images.length,
       current = 0;
-    images[current].classList.remove("opacity-0");
-    setInterval(() => {
-      if (current>0){
-        images[current-1].classList.add('opacity-0')
-      }else{
-        images[total-1].classList.add('opacity-0')
-      }
-      images[current].classList.remove('opacity-0')
-      if (current == total - 1) {
-        current = 0;
+      const imageSlider=()=>{
         
-      } else {
-        current += 1;
+          if (current>0){
+            images[current-1].classList.add('opacity-0')
+          }else{
+            images[total-1].classList.add('opacity-0')
+          }
+          images[current].classList.remove('opacity-0')
+          if (current == total - 1) {
+            current = 0;
+            
+          } else {
+            current += 1;
+          }
+        
       }
-    }, 2000);
+      imageSlider()
+    let interval= setInterval(imageSlider, 2000);
+    return ()=>{
+      clearInterval(interval)
+    }
   }, [ref]);
   return (
     <div className="h-full w-full flex items-center justify-center ">
