@@ -29,7 +29,7 @@ function App() {
     }
   }, [ref]);
   return (
-    <div className="h-full w-full flex items-center justify-center ">
+    <div className="h-full w-full flex items-center gap-x-8 justify-center ">
       <div className="w-[380px] h-[581px] bg-logo-pattern relative bg-[length:468.32px_634.15px] bg-[top_left_-46px]">
         <div
           className="w-[250px] h-[538px] absolute top-[27px] right-[18px]"
@@ -54,9 +54,16 @@ function App() {
         </div>
       </div>
 
-      <div className="h-[350px] bg-white border">
-        <img className="h-[51px]" src="https://www.secure.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png"></img>
-        <form></form>
+      <div className="h-[350px] bg-white border px-[50px] pt-8 pb-2">
+        <a href="" className="flex justify-center">
+          <img className="h-[51px]" src="https://www.secure.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png"></img>
+        </a>
+        <form>
+          <label for="">
+            <input type="" name="" value="" className="bg-zinc-50 border w-full h-[38px]"></input>
+            <small>Phone number,username,email</small>
+          </label>
+        </form>
       </div>
     </div>
   );
