@@ -6,27 +6,24 @@ function App() {
     let images = ref.current.querySelectorAll("img"),
       total = images.length,
       current = 0;
-      const imageSlider=()=>{
-        
-          if (current>0){
-            images[current-1].classList.add('opacity-0')
-          }else{
-            images[total-1].classList.add('opacity-0')
-          }
-          images[current].classList.remove('opacity-0')
-          if (current == total - 1) {
-            current = 0;
-            
-          } else {
-            current += 1;
-          }
-        
+    const imageSlider = () => {
+      if (current > 0) {
+        images[current - 1].classList.add("opacity-0");
+      } else {
+        images[total - 1].classList.add("opacity-0");
       }
-      imageSlider()
-    let interval= setInterval(imageSlider, 2000);
-    return ()=>{
-      clearInterval(interval)
-    }
+      images[current].classList.remove("opacity-0");
+      if (current == total - 1) {
+        current = 0;
+      } else {
+        current += 1;
+      }
+    };
+    imageSlider();
+    let interval = setInterval(imageSlider, 2000);
+    return () => {
+      clearInterval(interval);
+    };
   }, [ref]);
   return (
     <div className="h-full w-full flex items-center gap-x-8 justify-center ">
@@ -56,18 +53,37 @@ function App() {
 
       <div className="h-[350px] bg-white border px-[50px] pt-8 pb-2">
         <a href="" className="flex justify-center">
-          <img className="h-[51px]" src="https://www.secure.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png"></img>
+          <img
+            className="h-[51px]"
+            src="https://www.secure.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png"
+          ></img>
         </a>
         <form className="grid gap-y-1.5">
           <label for="" className="block relative">
-            <input  required={true} type="text" name="" value="" className="bg-zinc-50 border px-2 outline-none text-xs focus:border-gray-400 rounded-sm w-full valid:pt-[10px] h-[38px] peer"></input>
-            <small className="cursor-text pointer-events-none absolute top-1/2 left-[9px] text-xs peer-valid:text-[10px] peer-valid:top-2.5 text-gray-500 transition-all -translate-y-1/2">Phone number,username,email</small>
+            <input
+              required={true}
+              type="text"
+              name=""
+              value=""
+              className="bg-zinc-50 border px-2 outline-none text-xs focus:border-gray-400 rounded-sm w-full valid:pt-[10px] h-[38px] peer"
+            ></input>
+            <small className="cursor-text pointer-events-none absolute top-1/2 left-[9px] text-xs peer-valid:text-[10px] peer-valid:top-2.5 text-gray-500 transition-all -translate-y-1/2">
+              Phone number,username,email
+            </small>
           </label>
           <label for="" className="block relative">
-            <input  required={true} type="password" name="" value="" className="bg-zinc-50 border px-2 outline-none text-xs focus:border-gray-400 rounded-sm w-full valid:pt-[10px] h-[38px] peer"></input>
-            <small className="cursor-text pointer-events-none absolute top-1/2 left-[9px] text-xs peer-valid:text-[10px] peer-valid:top-2.5 text-gray-500 transition-all -translate-y-1/2">Password</small>
+            <input
+              required={true}
+              type="password"
+              name=""
+              value=""
+              className="bg-zinc-50 border px-2 outline-none text-xs focus:border-gray-400 rounded-sm w-full valid:pt-[10px] h-[38px] peer"
+            ></input>
+            <small className="cursor-text pointer-events-none absolute top-1/2 left-[9px] text-xs peer-valid:text-[10px] peer-valid:top-2.5 text-gray-500 transition-all -translate-y-1/2">
+              Password
+            </small>
           </label>
-          <button type="submit"></button>
+          <button type="submit">Log in</button>
         </form>
       </div>
     </div>
