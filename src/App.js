@@ -1,7 +1,10 @@
 import "./App.css";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 function App() {
   const ref = useRef();
+  const [username,setUsername]=useState('')
+  const [password,setPassword]=useState('')
+
   useEffect(() => {
     let images = ref.current.querySelectorAll("img"),
       total = images.length,
@@ -51,7 +54,7 @@ function App() {
         </div>
       </div>
 
-      <div className="h-[350px] bg-white border px-[40px] pt-8 pb-2">
+      <div className="h-[350px] bg-white border px-[40px] pt-10 pb-2">
         <a href="" className="flex justify-center mb-8">
           <img
             className="h-[51px]"
@@ -59,31 +62,33 @@ function App() {
           ></img>
         </a>
         <form className="grid gap-y-1.5">
-          <label for="" className="block relative">
+          <label className="block relative">
             <input
               required={true}
               type="text"
-              name=""
-              value=""
               className="bg-zinc-50 border px-2 outline-none text-xs focus:border-gray-400 rounded-sm w-full valid:pt-[10px] h-[38px] peer"
             ></input>
             <small className="cursor-text pointer-events-none absolute top-1/2 left-[9px] text-xs peer-valid:text-[10px] peer-valid:top-2.5 text-gray-500 transition-all -translate-y-1/2">
               Phone number,username,email
             </small>
           </label>
-          <label for="" className="block relative">
+          <label  className="block relative">
             <input
               required={true}
               type="password"
-              name=""
-              value=""
               className="bg-zinc-50 border px-2 outline-none text-xs focus:border-gray-400 rounded-sm w-full valid:pt-[10px] h-[38px] peer"
             ></input>
             <small className="cursor-text pointer-events-none absolute top-1/2 left-[9px] text-xs peer-valid:text-[10px] peer-valid:top-2.5 text-gray-500 transition-all -translate-y-1/2">
               Password
             </small>
           </label>
-          <button type="submit" className="h-[30px] rounded bg-brand text-white text">Log In</button>
+          <button type="submit"disabled={true} className="h-[30px] rounded bg-brand font-medium text-white text disabled:opacity-50">Log In</button>
+          <div className="flex items-center">
+            <div className="h-px bg-gray-300 flex-1"></div>
+            <span className="px-4 text-[13px] text-gray-500 font-semibold">OR</span>
+            <div className="h-px bg-gray-300 flex-1">
+            </div>
+          </div>
         </form>
       </div>
     </div>
