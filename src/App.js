@@ -51,8 +51,8 @@ function App() {
         </div>
       </div>
 
-      <div className="h-[350px] bg-white border px-[50px] pt-8 pb-2">
-        <a href="" className="flex justify-center">
+      <div className="h-[350px] bg-white border px-[40px] pt-8 pb-2">
+        <a href="" className="flex justify-center mb-8">
           <img
             className="h-[51px]"
             src="https://www.secure.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png"
@@ -83,7 +83,7 @@ function App() {
               Password
             </small>
           </label>
-          <button type="submit">Log in</button>
+          <button type="submit" className="h-[30px] rounded bg-brand text-white text">Log In</button>
         </form>
       </div>
     </div>

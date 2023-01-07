@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        brand:' #0095f6'
+
+      },
       backgroundImage:{
         'logo-pattern':'url(	https://static.cdninstagram.com/rsrc.php/v3/yr/r/fzBXVxs22bH.png) '
       }
