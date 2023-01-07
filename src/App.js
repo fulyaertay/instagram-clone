@@ -79,7 +79,7 @@ function App() {
         </form>
 
         <div>
-          <a href="#" className="flex justify-center items-center gap-x-2 text-sm">
+          <a href="#" className="flex justify-center items-center gap-x-2 text-sm font-semibold">
           <AiFillFacebook size={20}>
           </AiFillFacebook>
           Log in with Facebook</a>
