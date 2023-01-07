@@ -1,4 +1,10 @@
-export default function Home(){
+
+import { useEffect, useRef, useState } from "react";
+import Input from "../components/input"
+import {AiFillFacebook} from "react-icons/ai"
+
+export default function Login(){
+    
     const ref = useRef();
     const [username,setUsername]=useState('')
     const [password,setPassword]=useState('')
