@@ -7,6 +7,9 @@
 
 # testing
 /coverage
+package-lock.json
+.idea
+.netlify
 
 # production
 /build
