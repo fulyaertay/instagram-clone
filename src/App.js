@@ -59,9 +59,9 @@ function App() {
           <img className="h-[51px]" src="https://www.secure.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png"></img>
         </a>
         <form>
-          <label for="">
+          <label for="" className="block relative">
             <input type="" name="" value="" className="bg-zinc-50 border w-full h-[38px]"></input>
-            <small>Phone number,username,email</small>
+            <small className="absolute top-0 left-2 text-xs text-gray-500 translate-y-1/2">Phone number,username,email</small>
           </label>
         </form>
       </div>
