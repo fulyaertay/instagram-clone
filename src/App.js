@@ -65,7 +65,7 @@ function App() {
           </label>
           <label for="" className="block relative">
             <input  required={true} type="password" name="" value="" className="bg-zinc-50 border px-2 outline-none text-xs focus:border-gray-400 rounded-sm w-full valid:pt-[10px] h-[38px] peer"></input>
-            <small className="cursor-text pointer-events-none absolute top-1/2 left-[9px] text-xs peer-valid:text-[10px] peer-valid:top-2.5 text-gray-500 transition-all -translate-y-1/2">Phone number,username,email</small>
+            <small className="cursor-text pointer-events-none absolute top-1/2 left-[9px] text-xs peer-valid:text-[10px] peer-valid:top-2.5 text-gray-500 transition-all -translate-y-1/2">Password</small>
           </label>
         </form>
       </div>
