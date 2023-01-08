@@ -2,13 +2,17 @@
 import { useEffect, useRef, useState } from "react";
 import Input from "../components/input"
 import {AiFillFacebook} from "react-icons/ai"
-
+import {useDispatch} from "react-redux"
+import { setUser } from "../store/auth";
+import {useNavigate, useLocation} from "react-router-dom"
 export default function Login(){
     
     const ref = useRef();
     const [username,setUsername]=useState('')
     const [password,setPassword]=useState('')
-  
+    const dispatch=useDispatch()
+    const navigate=useNavigate()
+    const location=useLocation()
     const enable =username && password
   
     useEffect(() => {
@@ -29,6 +33,16 @@ export default function Login(){
         clearInterval(interval);
       };
     }, [ref]);
+    const handleSubmit =e=>{
+      e.preventDefault();
+      dispatch(setUser({
+        username
+      }))
+      navigate(location.state?.return_url || '/',{
+        replace:true
+      })
+
+    }
     return (
       <div className="h-full w-full flex flex-wrap overflow-auto items-center gap-x-8 justify-center ">
         <div className="hidden md:block w-[380px] h-[581px] bg-logo-pattern relative bg-[length:468.32px_634.15px] bg-[top_left_-46px]">
@@ -62,7 +76,7 @@ export default function Login(){
                 src="https://www.secure.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png"
               ></img>
             </a>
-            <form className="grid gap-y-1.5">
+            <form className="grid gap-y-1.5" onSubmit={handleSubmit}>
               <Input
                 type="text"
                 value={username}
